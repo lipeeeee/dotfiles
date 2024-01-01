@@ -13,6 +13,10 @@ curl -Lo lazygit.tar.gz "https://github.com/jesseduffield/lazygit/releases/lates
 tar xf lazygit.tar.gz lazygit
 sudo install lazygit /usr/local/bin
 
+# GIT
+git config --global user.name "lipeeeee"
+git config --global user.email "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx"
+
 # GOLANG
 wget https://dl.google.com/go/go1.21.5.linux-amd64.tar.gz
 sudo tar -xvf go1.21.5.linux-amd64.tar.gz
