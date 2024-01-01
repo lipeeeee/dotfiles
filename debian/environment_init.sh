@@ -13,6 +13,12 @@ curl -Lo lazygit.tar.gz "https://github.com/jesseduffield/lazygit/releases/lates
 tar xf lazygit.tar.gz lazygit
 sudo install lazygit /usr/local/bin
 
+# GOLANG
+wget https://dl.google.com/go/go1.21.5.linux-amd64.tar.gz
+sudo tar -xvf go1.21.5.linux-amd64.tar.gz
+sudo mv go /usr/local
+sudo apt install gopls # LSP
+
 # Latest neovim
 curl -LO https://github.com/neovim/neovim/releases/latest/download/nvim.appimage
 chmod u+x nvim.appimage
