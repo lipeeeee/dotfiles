@@ -3,7 +3,7 @@ alias gg="lazygit"
 alias ..="cd .."
 
 # Nvim
-alias nvim="~/bin/squashfs-root/usr/bin/nvim"
+alias nvim="/squashfs-root/usr/bin/nvim"
 alias nv=nvim
 alias nvimcfg="cd ~/.config/nvim"
 
