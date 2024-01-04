@@ -1,9 +1,11 @@
+#!/bin/sh
 # Jetbrains Mono Nerd Font 
 
 sudo apt update && sudo apt upgrade
 sudo apt install python3-pip
 sudo apt install unzip
 sudo apt install npm
+sudo apt install ripgrep
 sudo apt install clangd
 pip3 install poetry
 
