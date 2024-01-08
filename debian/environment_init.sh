@@ -7,6 +7,7 @@ sudo apt install unzip
 sudo apt install npm
 sudo apt install ripgrep
 sudo apt install clangd
+sudo apt install tree
 pip3 install poetry
 
 # Lazygit
