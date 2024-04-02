@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 # Jetbrains Mono Nerd Font 
 
 sudo apt update && sudo apt upgrade
