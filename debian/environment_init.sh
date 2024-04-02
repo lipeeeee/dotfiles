@@ -8,6 +8,7 @@ sudo apt install npm
 sudo apt install ripgrep
 sudo apt install clangd
 sudo apt install tree
+sudo apt install tmux
 pip3 install poetry
 
 # Lazygit
