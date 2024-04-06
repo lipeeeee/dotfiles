@@ -9,6 +9,7 @@ sudo apt install ripgrep
 sudo apt install clangd
 sudo apt install tree
 sudo apt install tmux
+sudo apt install fzf
 pip3 install poetry
 
 # Lazygit
