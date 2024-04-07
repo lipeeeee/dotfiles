@@ -87,20 +87,23 @@ fi
 # colored GCC warnings and errors
 #export GCC_COLORS='error=01;31:warning=01;35:note=01;36:caret=01;32:locus=01:quote=01'
 
-# some more ls aliases
-alias ll='ls -alF'
-alias la='ls -A'
-alias l='ls -CF'
-
 # Add an "alert" alias for long running commands.  Use like so:
 #   sleep 10; alert
 alias alert='notify-send --urgency=low -i "$([ $? = 0 ] && echo terminal || echo error)" "$(history|tail -n1|sed -e '\''s/^\s*[0-9]\+\s*//;s/[;&|]\s*alert$//'\'')"'
 
-# Alias definitions.
+# Env var definitions.
+if [ -f ~/.bash_variables ]; then
+    . ~/.bash_variables
+fi
 
-export DEV="/mnt/c/dev/"
+# Alias definitions.
 if [ -f ~/.bash_aliases ]; then
     . ~/.bash_aliases
+fi
+
+# Function definitions.
+if [ -f ~/.bash_functions ]; then
+    . ~/.bash_functions
 fi
 
 # enable programmable completion features (you don't need to enable
@@ -113,16 +116,6 @@ if ! shopt -oq posix; then
     . /etc/bash_completion
   fi
 fi
-
-# Tmux copy buffer to windows clipboard
-cpt() {
-	tmux show-buffer | clip.exe
-}
-
-# More exports
-export GOROOT=/usr/local/go
-export GOPATH=$HOME/go
-export PATH=$GOPATH/bin:$GOROOT/bin:$PATH
 
 # run neofetch
 # neofetch
