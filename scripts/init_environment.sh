@@ -3,7 +3,7 @@
 
 echo "Installing apt packages..."
 sudo apt update && sudo apt upgrade
-declare -a aptinstall=("python3-pip" "unzip" "npm" "ripgrep" "clangd" "tree" "tmux" "fzf" "curl")
+declare -a aptinstall=("python3-pip" "unzip" "npm" "ripgrep" "clangd" "tree" "tmux" "fzf" "curl" "git")
 sudo apt install "${aptinstall[@]}"
 
 echo "Installing pip packages..."
