@@ -21,4 +21,5 @@ for file in "${SIMPLE_DOTFILES[@]}"; do
 done
 
 # Link "complex" dotfiles to current system
-# TODO: Neovim git fetch config
+echo "> Importing neovim config"
+git clone git@github.com:lipeeeee/.nvim.git $HOME/.config/nvim --depth 1
