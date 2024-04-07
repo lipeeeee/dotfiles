@@ -3,7 +3,7 @@
 
 echo "Installing apt packages..."
 sudo apt update && sudo apt upgrade
-declare -a aptinstall=("python3-pip" "unzip" "npm" "ripgrep" "clangd" "tree" "tmux" "fzf")
+declare -a aptinstall=("python3-pip" "unzip" "npm" "ripgrep" "clangd" "tree" "tmux" "fzf" "curl")
 sudo apt install "${aptinstall[@]}"
 
 echo "Installing pip packages..."
@@ -16,12 +16,6 @@ curl -Lo lazygit.tar.gz "https://github.com/jesseduffield/lazygit/releases/lates
 tar xf lazygit.tar.gz lazygit
 sudo install lazygit /usr/local/bin
 
-echo "Installing GOLANG..."
-wget https://dl.google.com/go/go1.21.5.linux-amd64.tar.gz
-sudo tar -xvf go1.21.5.linux-amd64.tar.gz
-sudo mv go /usr/local
-
-# Latest neovim
 echo "Installing latest neovim build..."
 curl -LO https://github.com/neovim/neovim/releases/latest/download/nvim.appimage
 chmod u+x nvim.appimage
@@ -30,3 +24,6 @@ chmod u+x nvim.appimage
 # Optional: exposing nvim globally.
 sudo mv squashfs-root /
 sudo ln -s /squashfs-root/AppRun /usr/bin/nvim
+
+# Import scripts to /usr/bin
+# TODO
