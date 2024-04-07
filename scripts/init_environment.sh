@@ -11,7 +11,7 @@ declare -a pipinstall=("poetry")
 pip3 install "${pipinstall[@]}"
 
 # Create work dir
-workdir="./tmp/"
+workdir="./tmp"
 mkdir $workdir
 
 echo "Installing Lazygit..."
