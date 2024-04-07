@@ -24,6 +24,7 @@ echo "Installing latest neovim build..."
 curl -o $workdir/nvim.appimage -LO https://github.com/neovim/neovim/releases/latest/download/nvim.appimage
 chmod u+x $workdir/nvim.appimage
 ./$workdir/nvim.appimage --appimage-extract
+mv squashfs-root $workdir
 ./$workdir/squashfs-root/AppRun --version
 # Optional: exposing nvim globally.
 mv $workdir/squashfs-root /
