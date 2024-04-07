@@ -6,6 +6,7 @@ colorscheme default
 " fun stuff
 set nowrap
 set number
+set noswapfile
 
 " Netrw
 nnoremap <Leader>e :Ex<CR>
