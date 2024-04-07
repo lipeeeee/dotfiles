@@ -1,6 +1,12 @@
 alias gg="lazygit"
 alias ..="cd .."
 
+# Git
+alias ga="git add"
+alias gs="git status"
+alias gc="git commit"
+alias gp="git push"
+
 # ls aliases
 alias ll='ls -alF'
 alias la='ls -A'
