@@ -11,6 +11,7 @@ for file in "${SIMPLE_DOTFILES[@]}"; do
 	
 	# Check for excluded files
 	if [[ ! " $EXCLUDED_SIMPLES " =~ " $filename " ]]; then
+		echo "> Importing $filename..."
 		ln "$file" "$HOME/$filename"
 	fi
 done
