@@ -34,4 +34,4 @@ ln -s $workdir/squashfs-root/AppRun /usr/bin/nvim
 # TODO
 
 # Clean env
-# rm -rf $workdir
+rm -rf $workdir
