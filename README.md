@@ -3,12 +3,12 @@
 git clone --recurse-submodules git@github.com:lipeeeee/dotfiles.git
 ```
 
-### Setup symlinks
+### Import dotfiles to current system
 ```
-sudo -E ./scripts/create_symlinks.sh
+sudo -E ./scripts/import_dotfiles.sh
 ```
 
-### Setup environment
+### Init environment in new system 
 ```
-sudo -E ./scripts/environment_init.sh
+sudo -E ./scripts/init_environment.sh
 ```
