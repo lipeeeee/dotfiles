@@ -27,7 +27,7 @@ for file in "${SIMPLE_DOTFILES[@]}"; do
 	if [[ ! " $EXCLUDED_SIMPLES " =~ " $filename " ]]; then
 		if [[ ! -e "$HOME/$filename" || "$FORCE_REPLACE" = true ]]; then
 			echo "> Importing $filename..."
-			ln -f "$file" "$HOME/$filename"
+			ln -fs "$file" "$HOME/$filename"
 		else
 			echo "> Skipped $filename, already exists in system"
 		fi
