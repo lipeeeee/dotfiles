@@ -29,3 +29,7 @@ command! -nargs=0 Wq wq
 command! -nargs=0 Qa qa
 command! -nargs=0 QA qa
 
+" Replace tabs with 2 spaces
+set expandtab
+set tabstop=2
+set shiftwidth=2
