@@ -11,8 +11,12 @@ for file in "${SIMPLE_DOTFILES[@]}"; do
 	
 	# Check for excluded files
 	if [[ ! " $EXCLUDED_SIMPLES " =~ " $filename " ]]; then
-		echo "> Importing $filename..."
-		ln "$file" "$HOME/$filename"
+		if [ -e "$HOME/$filename" ]; then
+			echo "> Skipped $filename, already exists in system"
+		else
+			echo "> Importing $filename..."
+			ln "$file" "$HOME/$filename"
+		fi
 	fi
 done
 
