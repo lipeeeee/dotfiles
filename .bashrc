@@ -106,10 +106,10 @@ if [ -f ~/.bash_functions ]; then
     . ~/.bash_functions
 fi
 
-# Post definitions system personalized overrides
+# Post definitions, system personalized overrides / new variables,functions,etc..
 # Can be re-declaration of $DEV, and anything related to hardcoded values in bash files
-if [ -f ~/.override_bash ]; then
-  . ~/.override_bash
+if [ -f ~/.post_init ]; then
+  . ~/.post_init
 fi
 
 # enable programmable completion features (you don't need to enable
