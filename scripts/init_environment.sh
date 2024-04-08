@@ -26,12 +26,15 @@ chmod u+x $workdir/nvim.appimage
 ./$workdir/nvim.appimage --appimage-extract
 mv squashfs-root $workdir
 ./$workdir/squashfs-root/AppRun --version
-# Optional: exposing nvim globally.
+# exposing nvim globally.
 mv $workdir/squashfs-root /
-ln -s $workdir/squashfs-root/AppRun /usr/bin/nvim
+ln -s /squashfs-root/AppRun /usr/bin/nvim
 
-# Import scripts to /usr/bin
-# TODO
+echo "Importing scripts to /usr/bin/"
+declare -a scripts=("tmux-sessionizer")
+for script in "${scripts[@]}"; do
+    ln -s "$(realpath ./scripts/$script)" "/usr/bin/$script"
+done
 
 # Clean env
 rm -rf $workdir
