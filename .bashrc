@@ -106,6 +106,12 @@ if [ -f ~/.bash_functions ]; then
     . ~/.bash_functions
 fi
 
+# Post definitions system personalized overrides
+# Can be re-declaration of $DEV, and anything related to hardcoded values in bash files
+if [ -f ~/.override_bash ]; then
+  . ~/.override_bash
+fi
+
 # enable programmable completion features (you don't need to enable
 # this, if it's already enabled in /etc/bash.bashrc and /etc/profile
 # sources /etc/bash.bashrc).
