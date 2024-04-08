@@ -2,7 +2,7 @@
 # This script will port the dotfiles into current system
 
 DOTFILES_REPO="$HOME/dotfiles"
-EXCLUDED_SIMPLES=". .. .git .gitignore .gitmodules .config"
+EXCLUDED_SIMPLES=". .. .git .gitignore .gitmodules .gitconfig .config"
 SIMPLE_DOTFILES=( "$DOTFILES_REPO"/.* )
 FORCE_REPLACE=false
 
