@@ -42,7 +42,7 @@ fi
 
 if [ ! -d $HOME/.config/nvim ]; then
 	echo "> Importing neovim config"
-	git clone git@github.com:lipeeeee/.nvim.git $HOME/.config/nvim --depth 1
+	git clone git@github.com:lipeeeee/nvim.git $HOME/.config/nvim --depth 1
 else
 	echo "> Skipped neovim config, there is a .config/nvim folder already"
 fi

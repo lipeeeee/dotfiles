@@ -96,11 +96,6 @@ if [ -f ~/.bash_variables ]; then
     . ~/.bash_variables
 fi
 
-# Alias definitions.
-if [ -f ~/.bash_aliases ]; then
-    . ~/.bash_aliases
-fi
-
 # Function definitions.
 if [ -f ~/.bash_functions ]; then
     . ~/.bash_functions
@@ -108,10 +103,14 @@ fi
 
 # Post definitions, system personalized overrides / new variables,functions,etc..
 # Can be re-declaration of $DEV, and anything related to hardcoded values in bash files
-if [ -f ~/.post_init ]; then
-  . ~/.post_init
+if [ -f ~/.complement_bashrc ]; then
+  . ~/.complement_bashrc
 fi
 
+# Alias definitions.
+if [ -f ~/.bash_aliases ]; then
+    . ~/.bash_aliases
+fi
 # enable programmable completion features (you don't need to enable
 # this, if it's already enabled in /etc/bash.bashrc and /etc/profile
 # sources /etc/bash.bashrc).
