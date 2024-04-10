@@ -34,6 +34,16 @@ for file in "${SIMPLE_DOTFILES[@]}"; do
 	fi
 done
 
+# Create bashrc file
+if [[ ! -e $HOME/.complement_bashrc || "$FORCE_REPLACE" = true ]]; then
+  echo "> Creating ~/.complement_bashrc file..."
+  touch $HOME/.complement_bashrc
+  echo "# Complement bashrc, override or add new features" > $HOME/.complement_bashrc
+  echo "# export DEV=~/dev" >> $HOME/.complement_bashrc
+else
+  echo "> Ignoring creation of ~/.complement_bashrc, already exists..."
+fi
+
 ### Link "complex" dotfiles to current system
 # Neovim
 if [ "$FORCE_REPLACE" = true ]; then
@@ -42,7 +52,8 @@ fi
 
 if [ ! -d $HOME/.config/nvim ]; then
 	echo "> Importing neovim config"
-	git clone git@github.com:lipeeeee/nvim.git $HOME/.config/nvim --depth 1
+  # git clone git@github.com:lipeeeee/nvim.git ~/.config/nvim --depth 1
+	git clone https://github.com/lipeeeee/nvim.git $HOME/.config/nvim --depth 1
 else
 	echo "> Skipped neovim config, there is a .config/nvim folder already"
 fi

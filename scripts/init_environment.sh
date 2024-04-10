@@ -36,5 +36,10 @@ for script in "${scripts[@]}"; do
     ln -s "$(realpath ./scripts/$script)" "/usr/bin/$script"
 done
 
+# Fix root ownerships
+original_user=$(basename $HOME)
+chown -R $original_user:$original_user $HOME/.local
+chown -R $original_user:$original_user $HOME/.config
+
 # Clean env
 rm -rf $workdir
