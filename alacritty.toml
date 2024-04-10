@@ -1,2 +1,7 @@
 [font]
 # normal = { family = "name", style = "Regular" }
+
+[keyboard]
+bindings = [
+  { key = "Space", mods = "Control", chars = "\u0000" },
+]

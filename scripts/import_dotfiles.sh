@@ -46,10 +46,12 @@ fi
 
 # Alacritty config
 if [[ -n $ALACRITTY_CONFIG_DIRECTORY ]]; then
-  if [[ ! -L "$ALACRITTY_CONFIG_DIRECTORY/alacritty.toml" || "$FORCE_REPLACE" = true ]]; then
-    echo "> Importing alacritty config..."
+  if [[ ! -e "$ALACRITTY_CONFIG_DIRECTORY/alacritty.toml" || "$FORCE_REPLACE" = true ]]; then
+    echo "> Importing alacritty config...(COPY)"
     mkdir -p $ALACRITTY_CONFIG_DIRECTORY
-    ln -fs "alacritty.toml" "$ALACRITTY_CONFIG_DIRECTORY"
+    # Idk why alacritty can't understand symlinks windows->wsl2, so sad..
+    # ln -fs "$DOTFILES_REPO/alacritty.toml" "$ALACRITTY_CONFIG_DIRECTORY/alacritty.toml"
+    cp "$DOTFILES_REPO/alacritty.toml" "$ALACRITTY_CONFIG_DIRECTORY/alacritty.toml"
   else
     echo "> Skipped alacritty config, already exists in system"
   fi
