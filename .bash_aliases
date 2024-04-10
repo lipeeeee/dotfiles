@@ -6,6 +6,8 @@ alias ga="git add"
 alias gs="git status"
 alias gc="git commit"
 alias gp="git push"
+# Get all remote branches
+alias getbranches="for b in `git branch -r | grep -v -- '->'`; do git branch --track ${b##origin/} $b; done"
 
 # ls aliases
 alias ll='ls -alF'
