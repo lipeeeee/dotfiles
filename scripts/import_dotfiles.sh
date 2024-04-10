@@ -34,14 +34,27 @@ for file in "${SIMPLE_DOTFILES[@]}"; do
 	fi
 done
 
-# Create bashrc file
-if [[ ! -e $HOME/.complement_bashrc || "$FORCE_REPLACE" = true ]]; then
+# Create complement bashrc file
+if [[ ! -e $HOME/.complement_bashrc ]]; then
   echo "> Creating ~/.complement_bashrc file..."
   touch $HOME/.complement_bashrc
   echo "# Complement bashrc, override or add new features" > $HOME/.complement_bashrc
   echo "# export DEV=~/dev" >> $HOME/.complement_bashrc
 else
   echo "> Ignoring creation of ~/.complement_bashrc, already exists..."
+fi
+
+# Alacritty config
+if [[ -n $ALACRITTY_CONFIG_DIRECTORY ]]; then
+  if [[ ! -L "$ALACRITTY_CONFIG_DIRECTORY/alacritty.toml" || "$FORCE_REPLACE" = true ]]; then
+    echo "> Importing alacritty config..."
+    mkdir -p $ALACRITTY_CONFIG_DIRECTORY
+    ln -fs "alacritty.toml" "$ALACRITTY_CONFIG_DIRECTORY"
+  else
+    echo "> Skipped alacritty config, already exists in system"
+  fi
+else
+  echo "> Skipped alacritty config, set \$ALACRITTY_CONFIG_DIRECTORY in ~/.complement_bashrc to import the config"
 fi
 
 ### Link "complex" dotfiles to current system
