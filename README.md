@@ -12,3 +12,6 @@ sudo -E ./scripts/import_dotfiles.sh
 ```
 sudo -E ./scripts/init_environment.sh
 ```
+
+### TODO
+update npm on init_env
