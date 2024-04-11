@@ -1,4 +1,6 @@
-export DEV="/mnt/c/dev/"
+export DEV="~/dev/"
 export GOROOT="/usr/local/go"
 export GOPATH="$HOME/go"
 export PATH=$GOPATH/bin:$GOROOT/bin:$PATH
+
+export PYTHONDONTWRITEBYTECODE=1
