@@ -31,7 +31,7 @@ mv $workdir/squashfs-root /
 ln -s /squashfs-root/AppRun /usr/bin/nvim
 
 echo "Importing scripts to /usr/bin/"
-declare -a scripts=("tmux-sessionizer")
+declare -a scripts=("tmux-sessionizer" "tmux-persistent")
 for script in "${scripts[@]}"; do
     ln -s "$(realpath ./scripts/$script)" "/usr/bin/$script"
 done
