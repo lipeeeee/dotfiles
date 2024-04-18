@@ -29,5 +29,7 @@ alias godev=dev
 alias nvcfg="cd ~/.config/nvim"
 alias nvimcfg=nvcfg
 
-# Tmux-Sessionizer script (dotfiles/scripts/tmux-sessionizer) aliases
+# tmux aliases
+alias t="tmux"
 alias ts="tmux-sessionizer"
+alias tp="tmux-persistent"
