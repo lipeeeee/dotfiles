@@ -72,3 +72,7 @@ if [ ! -d $HOME/.config/nvim ]; then
 else
 	echo "> Skipped neovim config, there is a .config/nvim folder already"
 fi
+
+# Fix root ownerships
+original_user=$(basename $HOME)
+chown -R $original_user:$original_user $HOME/.config/nvim
