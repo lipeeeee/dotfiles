@@ -30,6 +30,10 @@ mv squashfs-root $workdir
 mv $workdir/squashfs-root /
 ln -s /squashfs-root/AppRun /usr/bin/nvim
 
+echo "Installing tmux plugins"
+git clone https://github.com/tmux-plugins/tpm $HOME/.tmux/plugins/tpm
+git clone https://github.com/tmux-plugins/tmux-resurrect $HOME/.tmux/tmux-resurrect
+
 echo "Importing scripts to /usr/bin/"
 declare -a scripts=("tmux-sessionizer" "tmux-persistent")
 for script in "${scripts[@]}"; do
@@ -40,6 +44,7 @@ done
 original_user=$(basename $HOME)
 chown -R $original_user:$original_user $HOME/.local
 chown -R $original_user:$original_user $HOME/.config
+chown -R $original_user:$original_user $HOME/.tmux
 
 # Clean env
 rm -rf $workdir
