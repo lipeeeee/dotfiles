@@ -17,4 +17,8 @@ apt-get update
 apt-get -y install cuda-toolkit-12-5
 
 echo 'export PATH="/usr/local/cuda-12.5/bin:$PATH"' >> ~/.bash_path
-echo ">> Cuda 12.5 installed, restart system"
+echo ">> Cuda-Toolkits 12.5 installed"
+
+##### pytorch with cuda support
+pip3 install torch torchvision torchaudio
+echo ">> pytorch installed, restart system"
