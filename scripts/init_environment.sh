@@ -1,5 +1,9 @@
 #!/bin/bash
+# Must be ran with sudo -E
 # Jetbrains Mono Nerd Font 
+
+echo "Creating local tmp folder"
+mkdir $HOME/tmp
 
 echo "Installing apt packages..."
 apt update && sudo apt upgrade
