@@ -13,5 +13,10 @@ sudo -E ./scripts/import_dotfiles.sh
 sudo -E ./scripts/init_environment.sh
 ```
 
+### Init AI workflow(cuda, cudann, pytorch) 
+```
+sudo -E ./scripts/init_ai_workflow.sh
+```
+
 ### TODO
 update npm on init_env
