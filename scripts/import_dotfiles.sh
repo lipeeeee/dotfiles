@@ -1,5 +1,6 @@
 #!/bin/bash
 # This script will port the dotfiles into current system
+# Has to be executed with sudo -E
 
 DOTFILES_REPO="$HOME/dotfiles"
 EXCLUDED_SIMPLES=". .. .git .gitignore .gitmodules .gitconfig .config"
@@ -42,6 +43,15 @@ if [[ ! -e $HOME/.complement_bashrc ]]; then
   echo "# export DEV=~/dev" >> $HOME/.complement_bashrc
 else
   echo "> Ignoring creation of ~/.complement_bashrc, already exists..."
+fi
+
+# Create bash path file
+if [[ ! -e $HOME/.bash_path ]]; then
+  echo "> Creating ~/.complement_bashrc file..."
+  touch $HOME/.bash_path
+  echo "# File that handles bash path management" > $HOME/.bash_path
+else
+  echo "> Ignoring creation of ~/.bash_path, already exists..."
 fi
 
 # Alacritty config
