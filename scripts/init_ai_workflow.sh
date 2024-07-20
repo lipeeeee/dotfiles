@@ -15,3 +15,6 @@ dpkg -i cuda-repo-wsl-ubuntu-12-5-local_12.5.1-1_amd64.deb
 cp /var/cuda-repo-wsl-ubuntu-12-5-local/cuda-*-keyring.gpg /usr/share/keyrings/
 apt-get update
 apt-get -y install cuda-toolkit-12-5
+
+echo 'export PATH="/usr/local/cuda-12.5/bin:$PATH"' >> ~/.bash_path
+echo ">> Cuda 12.5 installed, restart system"
