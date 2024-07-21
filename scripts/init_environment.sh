@@ -44,6 +44,9 @@ for script in "${scripts[@]}"; do
     ln -s "$(realpath ./scripts/$script)" "/usr/bin/$script"
 done
 
+echo "Updating node version"
+./scripts/update_node.sh
+
 # Fix root ownerships
 original_user=$(basename $HOME)
 chown -R $original_user:$original_user $HOME/.local
