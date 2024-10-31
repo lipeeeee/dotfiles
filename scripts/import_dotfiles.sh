@@ -85,4 +85,4 @@ fi
 
 # Fix root ownerships
 original_user=$(basename $HOME)
-chown -R $original_user:$original_user $HOME/.config/nvim
+chown -R $original_user:$original_user $HOME/.config
