@@ -16,6 +16,8 @@ alias la='ls -A'
 alias l='ls -CF'
 
 # Nvim
+# We should put point nvim to /usr/bin but w.e, this causes a bit of confusion
+# when refactoring things 
 alias nvim="/squashfs-root/usr/bin/nvim"
 alias nv=nvim
 alias nvimcfg="cd ~/.config/nvim"
