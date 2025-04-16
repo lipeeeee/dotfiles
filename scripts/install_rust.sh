@@ -1,13 +1,14 @@
 #!/bin/bash
+# Must be run with sudo -E
 
 # Exit script on error
 set -e
 
 echo ">> Updating package lists..."
-sudo apt update
+apt update
 
 echo ">> Installing necessary dependencies for Rust..."
-sudo apt install -y curl build-essential pkg-config libssl-dev
+apt install -y curl build-essential pkg-config libssl-dev
 
 # Check if Rust is already installed
 if command -v rustc &>/dev/null; then

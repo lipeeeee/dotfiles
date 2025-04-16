@@ -6,7 +6,7 @@ echo ">>> Creating local tmp folder"
 mkdir $HOME/tmp
 
 echo ">>> Installing apt packages..."
-apt update && sudo apt upgrade
+apt update && apt upgrade
 declare -a aptinstall=("python3-pip" "unzip" "npm" "ripgrep" "clangd" "tree" "tmux" "fzf" "curl" "git" "vim" "openssh-server")
 apt install "${aptinstall[@]}"
 
