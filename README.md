@@ -3,13 +3,17 @@
 git clone --recurse-submodules git@github.com:lipeeeee/dotfiles.git
 ```
 
-### Import dotfiles to current system
-```
+### Ssh init 
+```bash
+git clone git@github.com:lipeeeee/dotfiles.git ~/dotfiles && cd ~/dotfiles
 sudo -E ./scripts/import_dotfiles.sh
+sudo -E ./scripts/init_environment.sh
 ```
 
-### Init environment in new system 
-```
+### Https init 
+```bash
+git clone https://github.com/lipeeeee/dotfiles.git ~/dotfiles && cd ~/dotfiles
+sudo -E ./scripts/import_dotfiles.sh
 sudo -E ./scripts/init_environment.sh
 ```
 
