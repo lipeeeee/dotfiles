@@ -17,7 +17,6 @@ sudo -E ./scripts/import_dotfiles.sh
 sudo -E ./scripts/init_environment.sh
 ```
 
-### Init AI workflow(cuda, cudann, pytorch) 
-```
-sudo -E ./scripts/init_ai_workflow.sh
-```
+### Todo
+Make python importer with module system
+(this will make things much more stable, organized and easier to develop on)
