@@ -20,12 +20,14 @@ mkdir $workdir
 
 echo ">>> Installing Lazygit..."
 LAZYGIT_VERSION=$(curl -s "https://api.github.com/repos/jesseduffield/lazygit/releases/latest" | grep -Po '"tag_name": "v\K[^"]*')
-curl -o $workdir/lazygit.tar.gz -Lo lazygit.tar.gz "https://github.com/jesseduffield/lazygit/releases/latest/download/lazygit_${LAZYGIT_VERSION}_Linux_x86_64.tar.gz"
+curl -L -o lazygit.tar.gz "https://github.com/jesseduffield/lazygit/releases/latest/download/lazygit_${LAZYGIT_VERSION}_Linux_x86_64.tar.gz"
+mv lazygit.tar.gz $workdir
 tar xf $workdir/lazygit.tar.gz $workdir/lazygit
 install $workdir/lazygit /usr/local/bin
 
 echo ">>> Installing latest neovim build..."
-curl -o $workdir/nvim.appimage -LO https://github.com/neovim/neovim/releases/latest/download/nvim.appimage
+curl -L -o nvim.appimage https://github.com/neovim/neovim/releases/latest/download/nvim-linux-x86_64.appimage
+mv nvim.appimage $workdir
 chmod u+x $workdir/nvim.appimage
 ./$workdir/nvim.appimage --appimage-extract
 mv squashfs-root $workdir
