@@ -18,5 +18,9 @@ sudo -E ./scripts/init_environment.sh
 ```
 
 ### Todo
-Make python importer with module system
+1. Make python importer with module system
 (this will make things much more stable, organized and easier to develop on)
+
+2. Tests on docker image
+
+3. automated tests on actions
