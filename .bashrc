@@ -128,5 +128,7 @@ if ! shopt -oq posix; then
   fi
 fi
 
-# run neofetch
-# neofetch
+# Change command prompt (override)
+# PS1='\u:\W\$ ' # colorless user:path$ 
+PS1='\u@\h:\[\e[36m\]\w\[\e[0m\]\$ ' # user@machine:fullpath(cyan)$ 
+
