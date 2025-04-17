@@ -21,6 +21,8 @@ sudo -E ./scripts/init_environment.sh
 1. Make python importer with module system
 (this will make things much more stable, organized and easier to develop on) | this or make rwxrob style dot
 
+1.1 rr bash command that sources every cfg on system(incluiding tmux, nvim, etc..) if rwxrob style conf can put a source.sh in each folder
+
 2. Tests on docker image
 
 3. automated tests on actions
