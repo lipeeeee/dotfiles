@@ -19,7 +19,7 @@ sudo -E ./scripts/init_environment.sh
 
 ### Todo
 1. Make python importer with module system
-(this will make things much more stable, organized and easier to develop on)
+(this will make things much more stable, organized and easier to develop on) | this or make rwxrob style dot
 
 2. Tests on docker image
 
